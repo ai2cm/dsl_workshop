@@ -1,0 +1,22 @@
+# module load boost/1.70
+export LD_LIBRARY_PATH="/apps/boost-1.70/lib:$LD_LIBRARY_PATH"
+export CPATH="/apps/boost-1.70/include:$CPATH"
+export LIBRARY_PATH="/apps/boost-1.70/lib:$LIBRARY_PATH"
+export Boost_INCLUDE_DIR="/apps/boost-1.70/include"
+export BOOST_ROOT="/apps/boost-1.70"
+export BOOST_INCLUDE_DIRS="/apps/boost-1.70/include"
+export BOOST_LIBRARY_DIRS="/apps/boost-1.70/lib"
+
+# module load gcc/8.3.0
+export LD_LIBRARY_PATH="/apps/gcc-8/gcc-8.3.0//gmp-6.1.2/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/apps/gcc-8/gcc-8.3.0//mpc-1.1.0/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/apps/gcc-8/gcc-8.3.0//mpfr-4.0.2/lib:$LD_LIBRARY_PATH"
+export PATH="/apps/gcc-8/gcc-8.3.0//bin:$PATH"
+export MANPATH="/apps/gcc-8/gcc-8.3.0//share/man:$MANPATH"
+export LD_LIBRARY_PATH="/apps/gcc-8/gcc-8.3.0//lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/apps/gcc-8/gcc-8.3.0//lib64:$LD_LIBRARY_PATH"
+export MODULEPATH="/apps/modulefiles/compilers/gcc-8:$MODULEPATH"
+export CC="/apps/gcc-8/gcc-8.3.0//bin/gcc"
+export CXX="/apps/gcc-8/gcc-8.3.0//bin/g++"
+export FC="/apps/gcc-8/gcc-8.3.0//bin/gfortran"
+
