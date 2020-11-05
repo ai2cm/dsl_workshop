@@ -1,2 +1,3 @@
-# gt4py_workshop
-Material of the DSL Workshop held together with NOAA in 2020
+# Workshop on Domain-Specific Languages for Performance-Portable Weather and Climate Models
+
+Material of the workshop held together with NOAA in 2020
