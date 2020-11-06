@@ -8,13 +8,13 @@ Material of the workshop held together with NOAA in 2020
 2. `git clone https://github.com/VulcanClimateModeling/dsl_workshop.git workshop` (check out the repository for the workshop)
 3. Add the line `if [ -f ~/workshop/setup/jupyter_env ] ; then source ~/workshop/setup/jupyter_env ; fi` to the file `.bashrc` just before the line `if [ -z "$PS1" ]; then return; fi`
 4. Make sure current `.bashrc` is active by typing `exec bash`
-5. Check `gcc --version` is 8.3.0
-6. Go to workshop directory with `cd workshop`
-7. `module purge` (remove any previously loaded modules)
-8. `source setup/module_env` (load module environemnt for workshop)
+5. Go to workshop directory with `cd workshop`
+6. `module purge` (remove any previously loaded modules)
+7. `source setup/module_env` (load module environemnt for workshop)
+8. Check `gcc --version` is 8.3.0
 9. Install GT4Py and setup Python virtual environment as Jupyter kernel with `source ./setup/setup_venv`
 
-**Note:** If you ever logon to Orion to work interactively in a terminal, it's important you always repeat steps 7. and 8. in order to have the correct module environment loaded.
+**Note:** If you ever logon to Orion to work interactively in a terminal, it's important you always repeat steps 6. and 7. in order to have the correct module environment loaded.
 
 **Important:** At the end of the workshop you will want to remove the modification to your `~/.bashrc` again if you continue to use the Orion system.
 
