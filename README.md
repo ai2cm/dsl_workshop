@@ -21,3 +21,4 @@ Note: At the end of the workshop you will want to remove the modification to you
 3. Configure your session (Account Name = "gfdlhires", Partition Name = "development") and launch you session.
 4. Once the session has started, click "Connect to Jupyter"
 5. The material for the workshop is under `workshop/notebooks`
+6. Check you setup by executing the `Check-Setup.ipynb` notebook
