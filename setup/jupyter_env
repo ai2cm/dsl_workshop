@@ -20,3 +20,9 @@ export CC="/apps/gcc-8/gcc-8.3.0//bin/gcc"
 export CXX="/apps/gcc-8/gcc-8.3.0//bin/g++"
 export FC="/apps/gcc-8/gcc-8.3.0//bin/gfortran"
 
+
+#module load mpich/3.3.2
+export MODULEPATH="/apps/modulefiles/mpi/gcc-4.8.5/mpich-3.3.2:$MODULEPATH"
+export PATH="/apps/mpich-3.3.2/mpich-3.3.2/bin:$PATH"
+export MANPATH="/apps/mpich-3.3.2/mpich-3.3.2/share/man:$MANPATH"
+export LD_LIBRARY_PATH="/apps/mpich-3.3.2/mpich-3.3.2/lib:$LD_LIBRARY_PATH"
