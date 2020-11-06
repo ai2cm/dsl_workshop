@@ -11,6 +11,8 @@ Material of the workshop held together with NOAA in 2020
 5. Check `gcc --version` is 8.3.0
 6. Load a current version of Python with `module load python/3.7.5`
 7. Install GT4Py and setup Python virtual environment as Jupyter kernel with `source workshop/setup/setup_venv`
+8. Install a ipython profile for MPI with `ipython profile create --parallel --profile=mpi`
+9. Setup configuration using `cp workshop/setup/ipcluster_config.py ~/.ipython/profile_mpi/`
 
 Note: At the end of the workshop you will want to remove the modification to your `~/.bashrc` again if you continue to use the Orion system.
 
