@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# make sure we are using Python 3.7.5
-module load python/3.7.5
+# make sure we are using the right modules
+module purge
+source setup/module_env
 
 # create virtual environment for workshop
 python -m venv venv
