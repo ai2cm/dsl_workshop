@@ -8,7 +8,7 @@ fi
 
 python -m venv venv
 source venv/bin/activate
-pip install numpy matplotlib ipykernel
+pip install numpy matplotlib ipykernel ipyparallel mpi4py
 pip install -e ./gt4py
 
 python -m gt4py.gt_src_manager install

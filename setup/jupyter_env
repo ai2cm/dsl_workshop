@@ -1,3 +1,8 @@
+# module load python/3.7.5
+export PATH="/apps/python-3.7.5/bin:$PATH"
+export MANPATH="/apps/python-3.7.5/share/man:$MANPATH"
+export LD_LIBRARY_PATH="/apps/python-3.7.5/lib:$LD_LIBRARY_PATH"
+
 # module load boost/1.70
 export LD_LIBRARY_PATH="/apps/boost-1.70/lib:$LD_LIBRARY_PATH"
 export CPATH="/apps/boost-1.70/include:$CPATH"
@@ -15,8 +20,12 @@ export PATH="/apps/gcc-8/gcc-8.3.0//bin:$PATH"
 export MANPATH="/apps/gcc-8/gcc-8.3.0//share/man:$MANPATH"
 export LD_LIBRARY_PATH="/apps/gcc-8/gcc-8.3.0//lib:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="/apps/gcc-8/gcc-8.3.0//lib64:$LD_LIBRARY_PATH"
-export MODULEPATH="/apps/modulefiles/compilers/gcc-8:$MODULEPATH"
 export CC="/apps/gcc-8/gcc-8.3.0//bin/gcc"
 export CXX="/apps/gcc-8/gcc-8.3.0//bin/g++"
 export FC="/apps/gcc-8/gcc-8.3.0//bin/gfortran"
+
+# module load openmpi/4.0.4
+export PATH="/apps/openmpi-4.0.4/openmpi-4.0.4/bin:$PATH"
+export MANPATH="/apps/openmpi-4.0.4/openmpi-4.0.4/share/man:$MANPATH"
+export LD_LIBRARY_PATH="/apps/openmpi-4.0.4/openmpi-4.0.4/lib:$LD_LIBRARY_PATH"
 
