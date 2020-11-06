@@ -4,8 +4,8 @@ Material of the workshop held together with NOAA in 2020
 
 ## Setup on Orion
 
-1. Log on to orion with `ssh <user>@orion-login.hpc.msstate.edu`
-2. Check out the repository for the workshop `git clone https://github.com/VulcanClimateModeling/dsl_workshop.git workshop`
+1. ```ssh <user>@orion-login.hpc.msstate.edu``` (log on to Orion)
+2. `git clone https://github.com/VulcanClimateModeling/dsl_workshop.git workshop` (check out the repository for the workshop)
 3. Add the line `if [ -f ~/workshop/setup/jupyter_env ] ; then source ~/workshop/setup/jupyter_env ; fi` to the file `.bashrc` just before the line `if [ -z "$PS1" ]; then return; fi`
 4. Make sure current `.bashrc` is active by typing `exec bash`
 5. Check `gcc --version` is 8.3.0
