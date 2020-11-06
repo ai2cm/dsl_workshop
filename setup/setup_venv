@@ -1,6 +1,7 @@
 #!/bin/bash
 
 module load python/3.7.5
+module load mpich/3.3.2
 
 if [ ! -d gt4py ] ; then
   git clone https://github.com/GridTools/gt4py.git
@@ -9,6 +10,7 @@ fi
 python -m venv venv
 source venv/bin/activate
 pip install numpy matplotlib ipykernel
+pip install ipyparallel mpi4py
 pip install -e ./gt4py
 
 python -m gt4py.gt_src_manager install
