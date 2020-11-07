@@ -1,0 +1,24 @@
+#!/bin/bash
+
+dir=`readlink -f $0`
+
+# make sure we are using the right modules
+module purge
+source ${dir}/module_env
+
+# create virtual environment for workshop
+python -m venv venv
+source venv/bin/activate
+
+# install some standard packages we need
+pip install --upgrade pip setuptools wheel
+pip install numpy matplotlib ipykernel ipyparallel mpi4py
+
+# install GT4Py
+if [ ! -d gt4py ] ; then
+  git clone https://github.com/GridTools/gt4py.git
+fi
+pip install -e ./gt4py
+python -m gt4py.gt_src_manager install
+
+echo "Virtual environment has been successfully created and activated"

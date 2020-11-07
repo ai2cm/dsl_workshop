@@ -1,23 +1,16 @@
 #!/bin/bash
 
+dir=`readlink -f $0`
+
 # make sure we are using the right modules
 module purge
-source setup/module_env
+source ${dir}/module_env
 
 # create virtual environment for workshop
-python -m venv venv
-source venv/bin/activate
-
-# install some standard packages we need
-pip install --upgrade pip setuptools wheel
-pip install numpy matplotlib ipykernel ipyparallel mpi4py
-
-# install GT4Py
-if [ ! -d gt4py ] ; then
-  git clone https://github.com/GridTools/gt4py.git
+if [ -f venv ] ; then
+  ln -s /home/twicki/venv .
 fi
-pip install -e ./gt4py
-python -m gt4py.gt_src_manager install
+source venv/bin/activate
 
 # install venv as ipython kernel
 python -m ipykernel install --user --name venv --display-name "workshop"
@@ -26,4 +19,7 @@ python -m ipykernel install --user --name venv --display-name "workshop"
 ipython profile create --parallel --profile=mpi
 cp ./setup/ipcluster_config.py ~/.ipython/profile_mpi/
 
-echo "Setup for DSL workshop successfully completed"
+# deactivate virtual environment
+deactivate
+
+echo "Setup for DSL workshop successfully completed."
