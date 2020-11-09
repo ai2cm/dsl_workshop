@@ -1,14 +1,24 @@
 #!/bin/bash
 
+venv_location=/home/ofuhrer/venv
+
+# get directory where this script lives
 dir=`readlink -f $0`
+
+# make sure we're at the right place
+if [ `basename /bin/pwd` != "workshop" ] ; then
+  echo "ERROR: need to execute this script in workshop base directory named 'workshop'"
+fi
 
 # make sure we are using the right modules
 module purge
 source ${dir}/module_env
 
 # create virtual environment for workshop
-if [ -f venv ] ; then
-  ln -s /home/twicki/venv .
+if [ -f "${venv_location}" ] ; then
+  ln -s ${venv_location} venv
+else
+  echo "ERROR: problem accessing Python virtual env ${venv_location}"
 fi
 source venv/bin/activate
 

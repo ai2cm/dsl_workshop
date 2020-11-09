@@ -1,6 +1,12 @@
 #!/bin/bash
 
+venv_location=/home/ofuhrer/
+
+# get directory where this script is located in
 dir=`readlink -f $0`
+
+# go to target directory
+cd ${venv_location}
 
 # make sure we are using the right modules
 module purge
@@ -20,5 +26,8 @@ if [ ! -d gt4py ] ; then
 fi
 pip install -e ./gt4py
 python -m gt4py.gt_src_manager install
+
+# install fv3util
+pip install git+https://github.com/VulcanClimateModeling/fv3gfs-util.git@7c1367348037474711da454ca3dc5b50bf79e17d
 
 echo "Virtual environment has been successfully created and activated"
