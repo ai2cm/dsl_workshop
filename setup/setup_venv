@@ -1,16 +1,29 @@
 #!/bin/bash
 
-module load python/3.7.5
+# make sure we are using the right modules
+module purge
+source setup/module_env
 
+# create virtual environment for workshop
+python -m venv venv
+source venv/bin/activate
+
+# install some standard packages we need
+pip install --upgrade pip setuptools wheel
+pip install numpy matplotlib ipykernel ipyparallel mpi4py
+
+# install GT4Py
 if [ ! -d gt4py ] ; then
   git clone https://github.com/GridTools/gt4py.git
 fi
-
-python -m venv venv
-source venv/bin/activate
-pip install numpy matplotlib ipykernel
 pip install -e ./gt4py
-
 python -m gt4py.gt_src_manager install
+
+# install venv as ipython kernel
 python -m ipykernel install --user --name venv --display-name "workshop"
 
+# install ipython profile for MPI
+ipython profile create --parallel --profile=mpi
+cp ./setup/ipcluster_config.py ~/.ipython/profile_mpi/
+
+echo "Setup for DSL workshop successfully completed"
