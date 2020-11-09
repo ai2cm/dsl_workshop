@@ -1,9 +1,11 @@
 #!/bin/bash
 
-venv_location=/home/ofuhrer/
+set -ex
+
+venv_location=/home/ofuhrer/install/
 
 # get directory where this script is located in
-dir=`readlink -f $0`
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # go to target directory
 cd ${venv_location}
@@ -22,12 +24,26 @@ pip install numpy matplotlib ipykernel ipyparallel mpi4py
 
 # install GT4Py
 if [ ! -d gt4py ] ; then
-  git clone https://github.com/GridTools/gt4py.git
+  #git clone git@github.com:VulcanClimateModeling/gt4py.git
+  git clone git@github.com:GridTools/gt4py.git
 fi
+cd gt4py
+#git reset --hard 3bfa66776ebbbefd21e2b5d951157ef7b0beac96
+cd -
 pip install -e ./gt4py
 python -m gt4py.gt_src_manager install
 
 # install fv3util
-pip install git+https://github.com/VulcanClimateModeling/fv3gfs-util.git@7c1367348037474711da454ca3dc5b50bf79e17d
+if [ ! -d fv3util ] ; then
+  git clone git@github.com:VulcanClimateModeling/fv3gfs-util.git
+fi
+cd fv3gfs-util
+git reset --hard 7c1367348037474711da454ca3dc5b50bf79e17d
+cd -
+pip install -e ./fv3gfs-util
+
+# make world readable
+chmod 755 /home/`whoami`
+chmod -R 755 venv
 
 echo "Virtual environment has been successfully created and activated"
