@@ -1,3 +1,6 @@
+import os
+import sys
+sys.path.append(os.environ.get('SERIALBOX_ROOT') + '/python')
 import serialbox as ser
 import numpy as np
 

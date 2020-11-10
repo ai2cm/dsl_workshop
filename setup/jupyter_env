@@ -37,7 +37,6 @@ if ! [[ $HOSTNAME == Orion-login*  ]] ; then
   export MANPATH="/apps/openmpi-4.0.4/openmpi-4.0.4/share/man:$MANPATH"
   export LD_LIBRARY_PATH="/apps/openmpi-4.0.4/openmpi-4.0.4/lib:$LD_LIBRARY_PATH"
 
-  # serialbox
-  export SERIALBOX_ROOT="/home/rgeorge/serialbox_install"
-
 fi
+# serialbox
+export SERIALBOX_ROOT="/home/rgeorge/serialbox_install"
