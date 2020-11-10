@@ -10,9 +10,8 @@ Material of the workshop held together with NOAA in 2020
 4. Make sure current `.bashrc` is active by typing `exec bash`
 5. Go to workshop directory with `cd workshop`
 6. `module purge` (remove any previously loaded modules)
-7. `source setup/module_env` (load module environemnt for workshop)
-8. Check `gcc --version` is 8.3.0
-9. Install GT4Py and setup Python virtual environment as Jupyter kernel with `source ./setup/setup_venv`
+7. `source ./setup/module_env` (load module environemnt for workshop)
+8. Install GT4Py and setup Python virtual environment as Jupyter kernel with `./setup/setup_venv`
 
 **Note:** If you ever logon to Orion to work interactively in a terminal, it's important you always repeat steps 6. and 7. in order to have the correct module environment loaded.
 

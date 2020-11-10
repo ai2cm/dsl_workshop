@@ -1,23 +1,31 @@
 #!/bin/bash
 
+set -e
+
+venv_location=/home/ofuhrer/install/venv
+
+# get directory where this script lives
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+# make sure we're at the right place
+cwd=`/bin/pwd`
+if [ `basename ${cwd}` != "workshop" ] ; then
+  echo "ERROR: need to execute this script in workshop base directory named 'workshop'"
+  exit 1
+fi
+
 # make sure we are using the right modules
 module purge
-source setup/module_env
+source ${dir}/module_env
 
 # create virtual environment for workshop
-python -m venv venv
-source venv/bin/activate
-
-# install some standard packages we need
-pip install --upgrade pip setuptools wheel
-pip install numpy matplotlib ipykernel ipyparallel mpi4py
-
-# install GT4Py
-if [ ! -d gt4py ] ; then
-  git clone https://github.com/GridTools/gt4py.git
+if [ -d "${venv_location}" ] ; then
+  ln -s ${venv_location} venv
+else
+  echo "ERROR: problem accessing Python virtual env ${venv_location}"
+  exit 1
 fi
-pip install -e ./gt4py
-python -m gt4py.gt_src_manager install
+source venv/bin/activate
 
 # install venv as ipython kernel
 python -m ipykernel install --user --name venv --display-name "workshop"
@@ -26,4 +34,7 @@ python -m ipykernel install --user --name venv --display-name "workshop"
 ipython profile create --parallel --profile=mpi
 cp ./setup/ipcluster_config.py ~/.ipython/profile_mpi/
 
-echo "Setup for DSL workshop successfully completed"
+# deactivate virtual environment
+deactivate
+
+echo "Setup for DSL workshop successfully completed."
