@@ -24,12 +24,8 @@ pip install numpy matplotlib ipykernel ipyparallel mpi4py
 
 # install GT4Py
 if [ ! -d gt4py ] ; then
-  #git clone git@github.com:VulcanClimateModeling/gt4py.git
-  git clone git@github.com:GridTools/gt4py.git
+  git clone --branch workshop git@github.com:VulcanClimateModeling/gt4py.git
 fi
-cd gt4py
-#git reset --hard 3bfa66776ebbbefd21e2b5d951157ef7b0beac96
-cd -
 pip install -e ./gt4py
 python -m gt4py.gt_src_manager install
 
@@ -41,6 +37,9 @@ cd fv3gfs-util
 git reset --hard 7c1367348037474711da454ca3dc5b50bf79e17d
 cd -
 pip install -e ./fv3gfs-util
+
+# write log
+pip freeze > requirements_`date +"%Y-%m-%d-$H:$M"`.txt
 
 # make world readable
 chmod 755 /home/`whoami`
