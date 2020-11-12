@@ -2,7 +2,9 @@
 
 set -ex
 
-venv_location=/home/ofuhrer/install/
+whoami=$(whoami)
+
+venv_location=/home/$whoami/install/
 
 # get directory where this script is located in
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
@@ -39,10 +41,10 @@ cd -
 pip install -e ./fv3gfs-util
 
 # write log
-pip freeze > requirements_`date +"%Y-%m-%d-$H:$M"`.txt
+pip freeze > requirements_`date +"%Y-%m-%d-%H:%M"`.txt
 
 # make world readable
-chmod 755 /home/`whoami`
+chmod 755 /home/$whoami
 chmod -R 755 venv
 
 echo "Virtual environment has been successfully created and activated"

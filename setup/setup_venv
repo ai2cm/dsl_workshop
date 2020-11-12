@@ -2,7 +2,8 @@
 
 set -e
 
-venv_location=/home/ofuhrer/install/venv
+venv_user=jdahm
+venv_location=/home/$venv_user/install/venv
 
 # get directory where this script lives
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
