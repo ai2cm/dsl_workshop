@@ -22,7 +22,7 @@ Material of the workshop held together with NOAA in 2020
 1. Point your browser to https://orion-ood.hpc.msstate.edu/
 2. Login
 3. Click "Jupyter Notebook" under the "Interactive Apps" dropdown menu
-4. Configure your session (Account Name = "gfdlhires", Partition Name = "orion", QOS = "batch", Resource Reservation = "vulcan") and launch you session.
+4. Configure your session (Account Name = "gfdlhires", Partition Name = "orion", QOS = "batch", Resource Reservation = "vulcan") and launch you session. See image below.
 5. Once the session has started, click "Connect to Jupyter"
 6. The material for the workshop is under `workshop/notebooks`
 7. Check you setup by executing the `Check-Setup.ipynb` notebook
