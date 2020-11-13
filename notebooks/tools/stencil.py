@@ -1,5 +1,9 @@
 import os
 
+from pygments import highlight
+from pygments.lexers import guess_lexer
+from pygments.formatters import TerminalFormatter
+
 def print_stencil_code(stencil, show_cpp=True):
     """Prints the file stencil._file_name to stdout."""
     backend = stencil._gt_backend_
@@ -7,6 +11,11 @@ def print_stencil_code(stencil, show_cpp=True):
         build_dir = os.path.splitext(lap_tmp._file_name)[0] + "_pyext_BUILD"
         source_file = os.path.join(build_dir, "computation.cpp")
         with open(source_file, mode="r") as f:
-            print(f.read())
-    with open(stencil._file_name, mode="r") as f:
-        print(f.read())
+            code = f.read()
+            lexer = guess_lexer(code)
+            print(highlight(code, lexer, TerminalFormatter()))
+    else:
+        with open(stencil._file_name, mode="r") as f:
+            code = f.read()
+            lexer = guess_lexer(code)
+            print(highlight(code, lexer, TerminalFormatter()))
