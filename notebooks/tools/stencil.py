@@ -5,7 +5,11 @@ from pygments.lexers import guess_lexer
 from pygments.formatters import TerminalFormatter
 
 def print_generated_code(stencil, show_cpp=True):
-    """Prints the file stencil._file_name to stdout."""
+    """Prints the generated code that executes when a stencil is called.
+
+    If the stencil is generated from C++, show_cpp=True will show the C++ code
+    instead of the Python wrapper.
+    """
     backend = stencil._gt_backend_
     if backend.startswith("gt") and show_cpp:
         build_dir = os.path.splitext(stencil._file_name)[0] + "_pyext_BUILD"
