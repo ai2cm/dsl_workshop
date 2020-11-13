@@ -27,4 +27,6 @@ Material of the workshop held together with NOAA in 2020
 6. The material for the workshop is under `workshop/notebooks`
 7. Check you setup by executing the `Check-Setup.ipynb` notebook
 
+## Jupyter Notebook App Setup
+
 ![Jupyter Notebook Job Setup](setup/jupyter_setup.png)
