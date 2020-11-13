@@ -6,7 +6,7 @@ Material of the workshop held together with NOAA in 2020
 
 1. ```ssh <user>@orion-login.hpc.msstate.edu``` (log on to Orion)
 2. `git clone https://github.com/VulcanClimateModeling/dsl_workshop.git workshop` (check out the repository for the workshop)
-3. Add the line `if [ -f ~/workshop/setup/jupyter_env ] ; then source ~/workshop/setup/jupyter_env ; fi` to the file `~/.bashrc` just before the line `if [ -z "$PS1" ]; then return; fi`
+3. Add the line `if [ -f ~/workshop/setup/jupyter_env ] ; then source ~/workshop/setup/jupyter_env ; fi` to the file `~/.bashrc` just **before** the line `if [ -z "$PS1" ]; then return; fi`
 4. Make sure current `.bashrc` is active by typing `exec bash`
 5. Go to workshop directory with `cd workshop`
 6. `module purge` (remove any previously loaded modules)
@@ -22,7 +22,11 @@ Material of the workshop held together with NOAA in 2020
 1. Point your browser to https://orion-ood.hpc.msstate.edu/
 2. Login
 3. Click "Jupyter Notebook" under the "Interactive Apps" dropdown menu
-4. Configure your session (Account Name = "gfdlhires", Partition Name = "orion", QOS = "batch") and launch you session.
+4. Configure your session (Account Name = "gfdlhires", Partition Name = "orion", QOS = "batch", Resource Reservation = "vulcan") and launch you session. See image below.
 5. Once the session has started, click "Connect to Jupyter"
 6. The material for the workshop is under `workshop/notebooks`
 7. Check you setup by executing the `Check-Setup.ipynb` notebook
+
+## Jupyter Notebook App Setup
+
+![Jupyter Notebook Job Setup](setup/jupyter_setup.png)
