@@ -6,7 +6,7 @@ Material of the workshop held together with NOAA in 2020
 
 1. ```ssh <user>@orion-login.hpc.msstate.edu``` (log on to Orion)
 2. `git clone https://github.com/VulcanClimateModeling/dsl_workshop.git workshop` (check out the repository for the workshop)
-3. Add the line `if [ -f ~/workshop/setup/jupyter_env ] ; then source ~/workshop/setup/jupyter_env ; fi` to the file `~/.bashrc` just before the line `if [ -z "$PS1" ]; then return; fi`
+3. Add the line `if [ -f ~/workshop/setup/jupyter_env ] ; then source ~/workshop/setup/jupyter_env ; fi` to the file `~/.bashrc` just **before** the line `if [ -z "$PS1" ]; then return; fi`
 4. Make sure current `.bashrc` is active by typing `exec bash`
 5. Go to workshop directory with `cd workshop`
 6. `module purge` (remove any previously loaded modules)
