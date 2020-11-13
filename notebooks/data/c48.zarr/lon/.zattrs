@@ -1,0 +1,10 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "tile",
+        "y",
+        "x"
+    ],
+    "cell_methods": "time: point",
+    "long_name": "longitude",
+    "units": "degrees_E"
+}

@@ -1,0 +1,8 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "x"
+    ],
+    "cartesian_axis": "X",
+    "long_name": "T-cell longitude",
+    "units": "degrees_E"
+}

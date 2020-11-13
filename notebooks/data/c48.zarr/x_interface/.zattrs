@@ -1,0 +1,8 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "x_interface"
+    ],
+    "cartesian_axis": "X",
+    "long_name": "cell corner longitude",
+    "units": "degrees_E"
+}

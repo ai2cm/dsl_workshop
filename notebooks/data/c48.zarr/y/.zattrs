@@ -1,0 +1,8 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "y"
+    ],
+    "cartesian_axis": "Y",
+    "long_name": "T-cell latitude",
+    "units": "degrees_N"
+}

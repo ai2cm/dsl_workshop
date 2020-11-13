@@ -1,0 +1,290 @@
+{
+    "metadata": {
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "area/.zarray": {
+            "chunks": [
+                6,
+                48,
+                48
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                6,
+                48,
+                48
+            ],
+            "zarr_format": 2
+        },
+        "area/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "tile",
+                "y",
+                "x"
+            ],
+            "cell_methods": "time: point",
+            "long_name": "cell area",
+            "units": "m**2"
+        },
+        "lat/.zarray": {
+            "chunks": [
+                6,
+                48,
+                48
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                6,
+                48,
+                48
+            ],
+            "zarr_format": 2
+        },
+        "lat/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "tile",
+                "y",
+                "x"
+            ],
+            "cell_methods": "time: point",
+            "long_name": "latitude",
+            "units": "degrees_N"
+        },
+        "latb/.zarray": {
+            "chunks": [
+                6,
+                49,
+                49
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                6,
+                49,
+                49
+            ],
+            "zarr_format": 2
+        },
+        "latb/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "tile",
+                "y_interface",
+                "x_interface"
+            ],
+            "cell_methods": "time: point",
+            "long_name": "latitude",
+            "units": "degrees_N"
+        },
+        "lon/.zarray": {
+            "chunks": [
+                6,
+                48,
+                48
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                6,
+                48,
+                48
+            ],
+            "zarr_format": 2
+        },
+        "lon/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "tile",
+                "y",
+                "x"
+            ],
+            "cell_methods": "time: point",
+            "long_name": "longitude",
+            "units": "degrees_E"
+        },
+        "lonb/.zarray": {
+            "chunks": [
+                6,
+                49,
+                49
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                6,
+                49,
+                49
+            ],
+            "zarr_format": 2
+        },
+        "lonb/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "tile",
+                "y_interface",
+                "x_interface"
+            ],
+            "cell_methods": "time: point",
+            "long_name": "longitude",
+            "units": "degrees_E"
+        },
+        "x/.zarray": {
+            "chunks": [
+                48
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                48
+            ],
+            "zarr_format": 2
+        },
+        "x/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "x"
+            ],
+            "cartesian_axis": "X",
+            "long_name": "T-cell longitude",
+            "units": "degrees_E"
+        },
+        "x_interface/.zarray": {
+            "chunks": [
+                49
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                49
+            ],
+            "zarr_format": 2
+        },
+        "x_interface/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "x_interface"
+            ],
+            "cartesian_axis": "X",
+            "long_name": "cell corner longitude",
+            "units": "degrees_E"
+        },
+        "y/.zarray": {
+            "chunks": [
+                48
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                48
+            ],
+            "zarr_format": 2
+        },
+        "y/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "y"
+            ],
+            "cartesian_axis": "Y",
+            "long_name": "T-cell latitude",
+            "units": "degrees_N"
+        },
+        "y_interface/.zarray": {
+            "chunks": [
+                49
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                49
+            ],
+            "zarr_format": 2
+        },
+        "y_interface/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "y_interface"
+            ],
+            "cartesian_axis": "Y",
+            "long_name": "cell corner latitude",
+            "units": "degrees_N"
+        }
+    },
+    "zarr_consolidated_format": 1
+}

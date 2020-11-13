@@ -1,0 +1,8 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "y_interface"
+    ],
+    "cartesian_axis": "Y",
+    "long_name": "cell corner latitude",
+    "units": "degrees_N"
+}
