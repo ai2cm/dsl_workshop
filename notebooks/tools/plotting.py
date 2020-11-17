@@ -50,3 +50,14 @@ def plot_three_ij_slices(field1: Storage, field2: Storage, field3: Storage, k=0,
     plot_ij_slice(data2, ax[1], plt, title=titles[1], k=k, vmin=vmin, vmax=vmax)
     plot_ij_slice(data3, ax[2], plt, title=titles[2], k=k, vmin=vmin, vmax=vmax)
     fig.tight_layout()
+
+def plot_scaling_data(timings, sizes):
+    for backend in timings.keys():
+        plt.plot(sizes[backend], timings[backend], "-o", label=backend)
+    plt.title("Backend Scaling")
+    plt.grid(color="gray", linestyle='-')
+    plt.legend()
+    plt.xlabel("Domain Size")
+    plt.ylabel("Execution Time (ms)")
+    plt.yscale("log")
+    plt.show()
