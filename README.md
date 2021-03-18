@@ -1,6 +1,6 @@
 # Workshop on Domain-Specific Languages for Performance-Portable Weather and Climate Models
 
-Material of the workshop held together with NOAA in 2020
+Material of the workshop held together with NOAA in 2020. All presentations are available in the [slides](https://github.com/VulcanClimateModeling/dsl_workshop/tree/main/slides) directory. Recordings of the sessions are available on [request](mailto:oliverf@vulcan.com).
 
 ## Setup Environment on Orion
 
