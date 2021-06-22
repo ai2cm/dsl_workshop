@@ -479,7 +479,10 @@ c.IPClusterEngines.engine_launcher_class = 'MPI'
 
 ## The command line arguments to pass to mpiexec.
 #  Default: []
-c.MPILauncher.mpi_args = ['--oversubscribe']
+if os.environ['DOCKER'] == "True":
+    c.MPILauncher.mpi_args = []
+else:
+    c.MPILauncher.mpi_args = ['--oversubscribe']
 
 ## The mpiexec command to use in starting the process.
 #  Default: ['mpiexec']

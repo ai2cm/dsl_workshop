@@ -78,8 +78,11 @@ RUN git clone -b v2.6.0 --depth 1 https://github.com/GridTools/serialbox.git /us
     -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local/serialbox && \
     cmake --build build/ -j $(nproc) --target install
 
-RUN pip3 install --upgrade pip setuptools wheel
-RUN pip3 install numpy matplotlib ipykernel ipyparallel mpi4py
+RUN pip3 install --upgrade pip setuptools wheel && \
+    ln -s /bin/python3 /bin/python && \
+    ln -s /bin/pip3 /bin/pip
+RUN pip3 install numpy==1.19.5 matplotlib==3.3.4 ipykernel==5.5.5 ipyparallel==6.3.0 mpi4py==3.0.3 jupyter==1.0.0
+
 COPY gt4py /gt4py
 COPY fv3gfs-util /fv3gfs-util
 
@@ -91,18 +94,17 @@ RUN cd /fv3gfs-util && \
     cd - && \
     pip3 install -e /fv3gfs-util
 
-RUN pip3 install jupyter
-
-RUN python3 -m ipykernel install --user --name venv --display-name "workshop"
 
 RUN ipython profile create --parallel --profile=mpi
-COPY setup/ipcluster_config.py /root/.ipython/profile_mpi/
+
+COPY setup/ipcluster_configdocker.py /root/.ipython/profile_mpi/ipcluster_config.py
 
 ENV SERIALBOX_ROOT /usr/local/serialbox
-
+ENV DOCKER True
 ENV TINI_VERSION v0.6.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
 RUN chmod +x /usr/bin/tini
+
 WORKDIR /workshop
 ENTRYPOINT ["/usr/bin/tini", "--"]
 CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
