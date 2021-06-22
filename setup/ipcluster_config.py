@@ -479,6 +479,7 @@ c.IPClusterEngines.engine_launcher_class = 'MPI'
 
 ## The command line arguments to pass to mpiexec.
 #  Default: []
+import os
 if os.environ['DOCKER'] == "True":
     c.MPILauncher.mpi_args = []
 else:

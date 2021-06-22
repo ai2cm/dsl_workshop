@@ -97,7 +97,7 @@ RUN cd /fv3gfs-util && \
 
 RUN ipython profile create --parallel --profile=mpi
 
-COPY setup/ipcluster_configdocker.py /root/.ipython/profile_mpi/ipcluster_config.py
+COPY setup/ipcluster_config.py /root/.ipython/profile_mpi/ipcluster_config.py
 
 ENV SERIALBOX_ROOT /usr/local/serialbox
 ENV DOCKER True
