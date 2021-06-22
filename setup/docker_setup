@@ -1,0 +1,9 @@
+#!/bin/bash
+export DOCKER_BUILDKIT=1
+if [ ! -d gt4py ] ; then
+    git clone --branch workshop git@github.com:VulcanClimateModeling/gt4py.git
+fi
+if [ ! -d fv3gfs-util ] ; then
+    git clone git@github.com:VulcanClimateModeling/fv3gfs-util.git
+fi
+docker build --progress=plain -f Dockerfile -t workshop-jupyter .
