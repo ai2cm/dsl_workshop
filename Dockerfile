@@ -73,8 +73,8 @@ RUN wget -q https://boostorg.jfrog.io/artifactory/main/release/1.74.0/source/boo
 
 ## Build Serialbox
 ###
-RUN git clone -b v2.6.0 --depth 1 https://github.com/GridTools/serialbox.git /usr/src/serialbox && \
-    cmake -B build -S /usr/src/serialbox -DSERIALBOX_USE_NETCDF=ON -DSERIALBOX_TESTING=ON \
+RUN git clone -b v2.6.1 --depth 1 https://github.com/GridTools/serialbox.git /usr/src/serialbox && \
+    cmake -B build -S /usr/src/serialbox -DSERIALBOX_TESTING=ON  -DSERIALBOX_ENABLE_FORTRAN=ON \
     -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local/serialbox && \
     cmake --build build/ -j $(nproc) --target install
 
