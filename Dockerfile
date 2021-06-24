@@ -90,7 +90,7 @@ RUN pip3 install -e /gt4py
 RUN python3 -m gt4py.gt_src_manager install
 
 RUN cd /fv3gfs-util && \
-    git reset --hard 7c1367348037474711da454ca3dc5b50bf79e17d && \
+    git reset --hard ab80ad59efa5a615e5e1bf3b9282f8cc613568f3 && \
     cd - && \
     pip3 install -e /fv3gfs-util
 
