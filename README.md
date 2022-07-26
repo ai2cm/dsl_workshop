@@ -16,6 +16,7 @@ Material of the workshop held together with NOAA in 2020. All presentations are 
 **Note:** If you ever logon to Orion to work interactively in a terminal, it's important you always repeat steps 6. and 7. in order to have the correct module environment loaded.
 
 **Important:** At the end of the workshop you will want to remove the modification to your `~/.bashrc` again if you continue to use the Orion system.
+
 ##Setup Environment in Docker
 1. run setup/docker_setup to build this image (slow)
 2. run the run_docker.sh script to start up the notebook in a container, a link is provided for access
