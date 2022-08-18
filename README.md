@@ -13,7 +13,7 @@ Material of the workshop held together with NOAA in 2020. All presentations are 
 7. `source ./setup/module_env` (load module environemnt for workshop)
 8. Install GT4Py and setup Python virtual environment as Jupyter kernel with `./setup/setup_venv`
 
-**Note:** If you ever logon to Orion to work interactively in a terminal, it's important you always repeat steps 6. and 7. in order to have the correct module environment loaded.
+**Note:** If you ever log on to Orion to work interactively in a terminal, it's important you always repeat steps 6. and 7. in order to have the correct module environment loaded.
 
 **Important:** At the end of the workshop you will want to remove the modification to your `~/.bashrc` again if you continue to use the Orion system.
 
